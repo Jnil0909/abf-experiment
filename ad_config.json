@@ -1,0 +1,2090 @@
+{
+  "name": "OTT + USA",
+  "base": {
+    "targetings": {
+      "platforms": [
+        "ps4", "ps5", "xboxone", "amazon", "androidtv", "chromecast", "comcast", "comcasthosp", "cox", "echoshow", "enseo", "hilton", "hisense", "lgtv", "rogers", "roku", "samsung", "shaw", "sony", "telstra", "tvos", "tivo", "visionos", "vizio", "verizontv", "netgem", "bridgewater", "directvhosp"
+      ],
+      "countries": ["US"]
+    },
+    "pod-placement": {
+      "min-time-between-breaks": "720s",
+      "initial-ad-slot": "900s",
+      "final-ad-slot": "0s"
+    },
+    "pod-size": {
+      "max-preroll-count": 5,
+      "max-preroll-break": "77s",
+      "max-midroll-count": 5,
+      "max-midroll-break": "152s",
+      "alternate-max-midroll-count": 6,
+      "alternate-max-midroll-break": "122s",
+      "max-creative-duration": "300s",
+      "budgeted-actuator-threshold": 0
+    }
+  },
+  "deltas": [
+    {
+  "targeting-key": "content-position + daily-ad-breaks + user type + content-origin + internal_tags + content_id",
+  "configs": [
+    {
+      "name": "World cup replay + nondeeplink | all users",
+      "targetings": {
+        "content-ids": [200350230,200350229,200350228,200350227,200350226,200350225,200350224,200350223,200350222,200350221,200350219,200350220]
+      },
+      "content-metas": {},
+      "pod-placement": {},
+      "pod-size": {
+        "max-preroll-count": -3,
+        "max-preroll-break": "-45s",
+        "max-midroll-break": "-75s",
+        "alternate-max-midroll-break": "-75s"
+      }
+    },
+    {
+      "name": "World cup replay + deeplink | all users",
+      "targetings": {
+        "content-ids": [200350230,200350229,200350228,200350227,200350226,200350225,200350224,200350223,200350222,200350221,200350219,200350220],
+        "content-origins": [
+          "deeplink"
+        ]
+      },
+      "content-metas": {},
+      "pod-placement": {},
+      "pod-size": {
+        "max-preroll-count": -4,
+        "max-preroll-break": "-76s",
+        "max-midroll-break": "-75s",
+        "alternate-max-midroll-break": "-75s"
+      }
+    },
+    {
+      "name": "Autoplay + world cup | All users",
+      "targetings": {
+        "user-types": [
+          "d1_new_user",
+          "d2_new_user",
+          "d3_new_user",
+          "returning_user",
+          "d7_new_user",
+          "d14_new_user",
+          "d28_new_user"
+        ],
+        "content-origins": [
+          "ap_auto",
+          "ap_select"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s",
+        "max-midroll-count": 1,
+        "max-midroll-break": "30s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "30s",
+        "budgeted-actuator-threshold": 0
+      }
+    },
+    {
+      "name": "Early + world cup | Returning/D14-28",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [
+          "returning_user",
+          "d14_new_user",
+          "d28_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s",
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 0
+      }
+    },
+    {
+      "name": "Early + world cup | D1",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [
+          "d1_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 0,
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Early + world cup | D2-D3",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [
+          "d2_new_user",
+          "d3_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 0,
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Early + world cup | Deeplink",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [],
+        "content-origins": [
+          "deeplink"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 0,
+        "max-preroll-count": -4,
+        "max-preroll-break": "-76s"
+      }
+    },
+    {
+      "name": "Early + world cup | Container",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [
+          "d7_new_user",
+          "d14_new_user",
+          "d28_new_user",
+          "returning_user"
+        ],
+        "content-origins": [
+          "container"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "90s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 0,
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Early + non creator | Returning/D14-28",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [
+          "returning_user",
+          "d14_new_user",
+          "d28_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 15
+      }
+    },
+    {
+      "name": "Early + non creator | D1",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [
+          "d1_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 15,
+        "max-preroll-count": -3,
+        "max-preroll-break": "-10s"
+      }
+    },
+    {
+      "name": "Early + non creator | D2-D3",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [
+          "d2_new_user",
+          "d3_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 15,
+        "max-preroll-count": -2,
+        "max-preroll-break": "-10s"
+      }
+    },
+    {
+      "name": "Early + non creator | Deeplink",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [],
+        "content-origins": [
+          "deeplink"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 15,
+        "max-preroll-count": -4,
+        "max-preroll-break": "-10s"
+      }
+    },
+    {
+      "name": "Early + non creator | Container",
+      "targetings": {
+        "content-position": "[0s, 17m)",
+        "user-types": [
+          "d7_new_user",
+          "d14_new_user",
+          "d28_new_user",
+          "returning_user"
+        ],
+        "content-origins": [
+          "container"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {
+        "initial-ad-slot": "-60s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "budgeted-actuator-threshold": 15,
+        "max-preroll-count": -2,
+        "max-preroll-break": "-10s"
+      }
+    },
+    {
+      "name": "Late + <2 + world cup | Returning/D14-28",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [
+          "returning_user",
+          "d14_new_user",
+          "d28_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s",
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s"
+      }
+    },
+    {
+      "name": "Late + <2 + world cup | D1",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [
+          "d1_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Late + <2 + world cup | D2-D3",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [
+          "d2_new_user",
+          "d3_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Late + <2 + world cup | Deeplink",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [],
+        "content-origins": [
+          "deeplink"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "max-preroll-count": -4,
+        "max-preroll-break": "-76s"
+      }
+    },
+    {
+      "name": "Late + <2 + world cup | Container",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [
+          "d7_new_user",
+          "d14_new_user",
+          "d28_new_user",
+          "returning_user"
+        ],
+        "content-origins": [
+          "container"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "90s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Late + <2 + other | Returning/D14-28",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [
+          "returning_user",
+          "d14_new_user",
+          "d28_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s"
+      }
+    },
+    {
+      "name": "Late + <2 + other | D1",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [
+          "d1_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "max-preroll-count": -3,
+        "max-preroll-break": "-45s"
+      }
+    },
+    {
+      "name": "Late + <2 + other | D2-D3",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [
+          "d2_new_user",
+          "d3_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "max-preroll-count": -2,
+        "max-preroll-break": "-30s"
+      }
+    },
+    {
+      "name": "Late + <2 + other | Deeplink",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [],
+        "content-origins": [
+          "deeplink"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "max-preroll-count": -4,
+        "max-preroll-break": "-76s"
+      }
+    },
+    {
+      "name": "Late + <2 + other | Container",
+      "targetings": {
+        "content-position": "[17m,)",
+        "daily-ad-breaks": "[0, 2)",
+        "user-types": [
+          "d7_new_user",
+          "d14_new_user",
+          "d28_new_user",
+          "returning_user"
+        ],
+        "content-origins": [
+          "container"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {
+        "initial-ad-slot": "-60s"
+      },
+      "pod-size": {
+        "max-midroll-count": -1,
+        "max-midroll-break": "-30s",
+        "alternate-max-midroll-count": -1,
+        "alternate-max-midroll-break": "-30s",
+        "max-preroll-count": -2,
+        "max-preroll-break": "-30s"
+      }
+    },
+    {
+      "name": "Late + >=2 + world cup | Returning/D14-28",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [
+          "returning_user",
+          "d14_new_user",
+          "d28_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s",
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s"
+      }
+    },
+    {
+      "name": "Late + >=2 + world cup | D1",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [
+          "d1_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s",
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Late + >=2 + world cup | D2-D3",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [
+          "d2_new_user",
+          "d3_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s",
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Late + >=2 + world cup | Deeplink",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [],
+        "content-origins": [
+          "deeplink"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "150s"
+      },
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s",
+        "max-preroll-count": -4,
+        "max-preroll-break": "-76s"
+      }
+    },
+    {
+      "name": "Late + >=2 + world cup | Container",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [
+          "d7_new_user",
+          "d14_new_user",
+          "d28_new_user",
+          "returning_user"
+        ],
+        "content-origins": [
+          "container"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": [
+          "WORLD_CUP_2026", "CREATOR_CONTENT"
+        ]
+      },
+      "pod-placement": {
+        "initial-ad-slot": "90s"
+      },
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s",
+        "max-preroll-count": -3,
+        "max-preroll-break": "-40s"
+      }
+    },
+    {
+      "name": "Late + >=2 + other | Returning/D14-28",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [
+          "returning_user",
+          "d14_new_user",
+          "d28_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s"
+      }
+    },
+    {
+      "name": "Late + >=2 + other | D1",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [
+          "d1_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s",
+        "max-preroll-count": -3,
+        "max-preroll-break": "-45s"
+      }
+    },
+    {
+      "name": "Late + >=2 + other | D2-D3",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [
+          "d2_new_user",
+          "d3_new_user"
+        ],
+        "content-origins": []
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s",
+        "max-preroll-count": -2,
+        "max-preroll-break": "-30s"
+      }
+    },
+    {
+      "name": "Late + >=2 + other | Deeplink",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [],
+        "content-origins": [
+          "deeplink"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {},
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s",
+        "max-preroll-count": -4,
+        "max-preroll-break": "-76s"
+      }
+    },
+    {
+      "name": "Late + >=2 + other | Container",
+      "targetings": {
+        "content-position": "[17m,)",
+        "user-types": [
+          "d7_new_user",
+          "d14_new_user",
+          "d28_new_user",
+          "returning_user"
+        ],
+        "content-origins": [
+          "container"
+        ]
+      },
+      "content-metas": {
+        "internal_tags": []
+      },
+      "pod-placement": {
+        "initial-ad-slot": "-60s"
+      },
+      "pod-size": {
+        "max-midroll-count": 1,
+        "max-midroll-break": "15s",
+        "alternate-max-midroll-count": 1,
+        "alternate-max-midroll-break": "15s",
+        "max-preroll-count": -2,
+        "max-preroll-break": "-30s"
+      }
+    }
+  ]
+},
+{
+  "targeting-key": "content-types + device-fill-rate-percent + ads_tolerance_reg_uplift_hat_label + ad_load",
+  "configs": [
+    {
+      "name": "Sports Event + Static + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_sports_event"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-120s",
+        "initial-ad-slot": "-480s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + Static + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "0s",
+        "initial-ad-slot": "0s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 60_to_80 + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-60s",
+        "initial-ad-slot": "-90s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 40_to_60 + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-90s",
+        "initial-ad-slot": "-120s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 20_to_40 + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-180s",
+        "initial-ad-slot": "-180s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 0_to_20 + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-300s",
+        "initial-ad-slot": "-360s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + Static + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "0s",
+        "initial-ad-slot": "0s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + Static + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-72s",
+        "initial-ad-slot": "0s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + Static + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-72s",
+        "initial-ad-slot": "-90s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + Static + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-144s",
+        "initial-ad-slot": "-180s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 60_to_80 + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-60s",
+        "initial-ad-slot": "-90s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 60_to_80 + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-126s",
+        "initial-ad-slot": "-90s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 60_to_80 + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-126s",
+        "initial-ad-slot": "-171s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 60_to_80 + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-192s",
+        "initial-ad-slot": "-252s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 40_to_60 + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-90s",
+        "initial-ad-slot": "-120s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 40_to_60 + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-153s",
+        "initial-ad-slot": "-120s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 40_to_60 + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-153s",
+        "initial-ad-slot": "-198s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 40_to_60 + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-216s",
+        "initial-ad-slot": "-276s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 20_to_40 + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-180s",
+        "initial-ad-slot": "-180s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 20_to_40 + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-234s",
+        "initial-ad-slot": "-180s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 20_to_40 + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-234s",
+        "initial-ad-slot": "-252s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 20_to_40 + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-288s",
+        "initial-ad-slot": "-324s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 0_to_20 + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-300s",
+        "initial-ad-slot": "-360s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 0_to_20 + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-342s",
+        "initial-ad-slot": "-360s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 0_to_20 + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-342s",
+        "initial-ad-slot": "-414s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Movie + 0_to_20 + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_movie"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-360s",
+        "initial-ad-slot": "-468s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + Static + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-120s",
+        "initial-ad-slot": "-480s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 60_to_80 + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-180s",
+        "initial-ad-slot": "-480s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 40_to_60 + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-210s",
+        "initial-ad-slot": "-510s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 20_to_40 + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-240s",
+        "initial-ad-slot": "-510s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 0_to_20 + no_label + no_adload",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-360s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + Static + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-120s",
+        "initial-ad-slot": "-480s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + Static + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-180s",
+        "initial-ad-slot": "-480s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + Static + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-180s",
+        "initial-ad-slot": "-522s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + Static + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ]
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-240s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 60_to_80 + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-180s",
+        "initial-ad-slot": "-480s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 60_to_80 + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-234s",
+        "initial-ad-slot": "-480s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 60_to_80 + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-234s",
+        "initial-ad-slot": "-522s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 60_to_80 + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[60,80)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-288s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 40_to_60 + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-210s",
+        "initial-ad-slot": "-510s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 40_to_60 + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-261s",
+        "initial-ad-slot": "-510s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 40_to_60 + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-261s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 40_to_60 + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[40,60)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-312s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 20_to_40 + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-240s",
+        "initial-ad-slot": "-510s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 20_to_40 + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-288s",
+        "initial-ad-slot": "-510s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 20_to_40 + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-288s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 20_to_40 + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[20,40)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-336s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 0_to_20 + mid_and_low + all_ad_load",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4",
+          "4-6",
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "mid",
+          "low"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-360s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 0_to_20 + high_lvl_1_and_2 + ad_load_6plus",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "6-8",
+          "8-10",
+          "10+"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-360s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 0_to_20 + high_lvl_1_and_2 + ad_load_4to6",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "4-6"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-360s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "Episode + 0_to_20 + high_lvl_1_and_2 + ad_load_0to4",
+      "targetings": {
+        "content-types": [
+          "content_type_episode"
+        ],
+        "device-fill-rate-percent": "[0,20)"
+      },
+      "user-custom-fields": {
+        "ad_load": [
+          "0-2",
+          "2-4"
+        ],
+        "ads_tolerance_reg_uplift_hat_label": [
+          "high_lvl_1",
+          "high_lvl_2"
+        ]
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "-360s",
+        "initial-ad-slot": "-540s"
+      },
+      "pod-size": {}
+    },
+    {
+      "name": "No content + Static + no_label + no_adload",
+      "targetings": {
+        "content-types": []
+      },
+      "pod-placement": {
+        "min-time-between-breaks": "0s",
+        "initial-ad-slot": "0s"
+      },
+      "user-custom-fields": {
+        "ad_load": [],
+        "ads_tolerance_reg_uplift_hat_label": []
+      },
+      "pod-size": {}
+    }
+  ]
+}
+  ]
+}

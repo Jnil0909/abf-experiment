@@ -1,0 +1,115 @@
+{
+ "title": "ABF3 v10 — ABF2 Titles Results (Web)",
+ "window_short": "2026-10-09 → 2026-10-18",
+ "arm_label": {
+  "v4": "v4 (equal load)",
+  "v6": "v6 (movies 60–120 min, +7% load)",
+  "v5b": "v5b (ABF2 density, gate-aware placement)"
+ },
+ "front": [
+  [
+   "Experiment:",
+   "`ads_web_abf_3_v10_abf2_titles_only` (Web) · device-randomized, four arms at 25% each · restarted 2026-10-09 23:30 UTC (same restart as OTT)."
+  ],
+  [
+   "Arms:",
+   "Control = ABF2 human cue points. v4 = T1 equal-load pruner (`abf3_pruner_t1_equal_load_v4.py`). v6 = T2, equal load plus about +7% ad load on movies of 60–120 minutes (`abf3_pruner_t2_targeted_load_v6.py`). v5b = T3, ABF2-like cue counts placed where the OTT ad config accepts requests (`abf3_pruner_t3_abf2_density_v5b.py`). The served cue lists are catalog-level, so every platform serves the same lists as OTT."
+  ],
+  [
+   "Window:",
+   "2026-10-09 → 2026-10-18 (complete days). Outcomes are capped at 2026-10-19 00:00 UTC, the latest day loaded in the exposures table; same window as the refreshed OTT report. This is an early read of a live test, not a graduation read, and it has not been re-reconciled with a Statsig scorecard."
+  ],
+  [
+   "Method:",
+   "device-level CUPED, pre-period 2026-09-25 → 2026-10-08, Welch 95% intervals. ~6.28M devices/arm (ITT). Revenue is reported three ways — total (all billable ads), budgeted (direct, guaranteed, PMP), and unbudgeted (open auction, the v8 metric) — plus ad impressions and TVT. Same queries and definitions as the OTT report (Appendix C), run on the web experiment's exposures. Report date 2026-10-19."
+  ],
+  [
+   "Refresh (2026-10-19):",
+   "Window extended from 2026-10-15 14:00 UTC to the end of 2026-10-18 (every complete day loaded in the exposures table); ITT devices/arm grew from 3.42M to 6.28M. Global ITT total revenue, 10-15 → now: v4 −1.351% → −1.529%; v5b +1.936% → +1.921%; v6 −0.235% → −0.280%. TVT: v4 +0.379% → −0.071%; v5b +0.013% → +0.179%; v6 +0.153% → +0.012%. No global ITT significance call changed. All tables, the band/type/below-control cuts, the gate replay and the viewing-depth numbers below were re-run on the new window."
+  ]
+ ],
+ "tldr": [
+  [
+   "v5b is the clear winner on web.",
+   "Total revenue +1.921% sig, budgeted +1.911% sig, unbudgeted +2.387% sig, impressions +2.051% sig. On the treated ABF2 titles open-auction revenue is +3.653% sig. TVT flat (+0.179% ns)."
+  ],
+  [
+   "v4 loses; v6 is flat.",
+   "Total revenue v4 −1.529% sig (budgeted −1.486% sig), v6 −0.280% ns. Neither moves TVT."
+  ],
+  [
+   "Episodes split the arms, as on mobile.",
+   "Episode open-auction revenue: v5b +4.21% sig, v6 −4.46% sig, v4 −2.65% ns. Movies gain on v6 (+4.54% sig); v4 (+2.04% ns) and v5b (+1.89% ns) are positive but not significant."
+  ],
+  [
+   "Web is a small, noisy surface.",
+   "Only ~9% of exposed web devices watched anything in-window (Active n ≈ 594K/arm), and total revenue is ~$0.02 per exposed device in the window. Intervals are wide; at the headline level only v5b's gain and v4's loss clear zero."
+  ],
+  [
+   "TVT is flat everywhere.",
+   "No TVT move is significant in any population, band, type, or below-control cut."
+  ]
+ ],
+ "tldr_note": "All figures are global ITT CUPED lifts versus Control. Direction is stable across ITT, Active, and ToT (v4's total-revenue loss is also significant in Active and ToT). Significance calls are nominal 95% (not adjusted for sequential looks or three arms) and the interval widening seen on the Statsig scorecard (~1.8× on the 10-15 OTT read) would apply here too; not re-checked against Statsig for this window.",
+ "headline_intro": "All figures are CUPED lifts versus Control, 95% intervals. Global is across every title an exposed device watched. On-title is the same devices, restricted to the ABF2 title list. “Sig” means the interval excludes zero (nominal p < 0.05).",
+ "money_read": "v5b gains in every pool, with the largest lift in the open auction (+2.387% sig) — the opposite of OTT, where v5b's gain comes mostly through budgeted demand. v4's loss is in the budgeted pool (−1.486% sig); its open-auction revenue is −0.881% ns.",
+ "ontitle_read": "On the treated ABF2 titles v5b is +3.653% sig (ITT), +2.115% sig (Active), +2.125% sig (ToT). v4 and v6 are not significant on-title in any population. On-title TVT flat for all arms.",
+ "npv_read": "No TVT move is significant for either viewer type. Power viewers are rare on web (~0.25%), so that row is very wide.",
+ "band_read": [
+  "v5b gains in the sparse bands: 1–3 +8.71% sig, 4–6 +5.72% sig. v6 loses at 1–3 (−7.84% sig).",
+  "10–12 is positive on v6 (+5.47% sig) and v4 (+3.06% sig, lower bound just above zero); v5b +2.36% ns.",
+  "7–9 and 13+ are not significant for any arm. Band cells on web are small (81–245K devices), so only large moves clear zero.",
+  "TVT is flat in every band."
+ ],
+ "below_read": "Same direction as OTT and mobile for v4 and v6: below-control titles lose and at/above-control titles gain. Significant cells: v4 10–12 below −9.62% sig; v4 10–12 at/above +8.85% sig; v4 13+ below −3.38% sig; v5b 10–12 at/above +4.51% sig; v6 10–12 below −9.65% sig; v6 10–12 at/above +8.81% sig; v6 13+ at/above +5.67% sig. The remaining v5b cells are mixed and not significant at web sample sizes. The per-title floor case holds on web.",
+ "type_read": "Episodes split the arms: v5b +4.21% sig, v6 −4.46% sig, v4 −2.65% ns. Movies: v6 +4.54% sig; v4 and v5b positive but not significant. TVT flat.",
+ "gate_intro": "Replay the pod gate (greedy first-eligible) over the ABF2 and served positions, weighted by each title's in-window web TVT. The web ad config is not in the project files, so two gate profiles are shown: A = OTT base gates, and B = the most tolerant OTT ladder step. Observed web midrolls start earlier than OTT (median first episode break ~491s vs ~652s on OTT, measured on a 2026-10-12/13 sample), so B is the closer approximation. Profile B fits the measured per-band impression lifts clearly better (r = 0.49 vs 0.28 across the 15 arm×band cells).",
+ "gate_read": "Under the tolerant profile v5b fires more episode breaks in every band (+4.5% to +20.8%) and v4/v6 fire fewer from 4–6 up (v4 −1.2% at 4–6 to −4.7% at 13+) — the measured episode split. Web episode viewing is shallower than OTT (81.7% of ABF2 episode views reach ~6.3 min, 79.1% reach ~9.7 min; OTT 91.1% / 89.3%), which likely adds to v4/v6's late-first-cue penalty on sparse episodes.",
+ "decomp_read": "For v4/v6 the episode losses come mostly from fewer cue points under both profiles → the per-title floor is the lever. For v5b the tolerant profile makes the count term positive: ABF2-density lists fire more breaks when gates are looser.",
+ "decision_intro": "Early read, same window as OTT. Web is the smallest and noisiest surface; treat everything except v5b's gain and v4's loss as directional.",
+ "decision": [
+  [
+   "v5b leads on web too.",
+   "Total revenue +1.921% sig, open-auction +2.387% sig, on-title +3.653% sig, TVT flat. It is the only arm with a significant total-revenue gain on all three platforms (on mobile with a small TVT dip)."
+  ],
+  [
+   "v4 should not ship to web.",
+   "Total revenue −1.529% sig, driven by budgeted demand (−1.486% sig)."
+  ],
+  [
+   "v6 is neutral on web.",
+   "Total revenue −0.280% ns; its movie gain (+4.54% sig) is offset by the episode loss (−4.46% sig)."
+  ],
+  [
+   "Open items.",
+   "Get the web ad config to replace the approximate gate profiles; a longer window is needed for the band and below-control cells."
+  ]
+ ],
+ "pool_read": "For v5b both pools rise (budgeted +2.033% sig, unbudgeted +2.703% sig): new inventory filled by both demand types, a clean incrementality signal. v4's budgeted impressions fall (−1.494% sig).",
+ "methods": [
+  [
+   "Assignment.",
+   "One variant per device from `core_dev.statsig.exposures` for `ads_web_abf_3_v10_abf2_titles_only`; no device has more than one variant. Outcomes require event time at/after first exposure."
+  ],
+  [
+   "Window.",
+   "Outcomes 2026-10-09 through 2026-10-18, capped at 2026-10-19 00:00 UTC. CUPED covariate 2026-09-25 → 2026-10-08. Active = ≥1 video session since first exposure in-window. ToT = ≥1 second of TVT on an ABF2-catalog title in-window."
+  ],
+  [
+   "ABF2 title list, metrics, estimator.",
+   "Identical to the OTT report: movie/episode streams with non-empty `cue_points_abf`, excluding `abf3_pruned_v8` and the v8 title table; total / budgeted / unbudgeted revenue from `core_prod.ads.impressions` × `mercurydb_cdc.campaigns` with the v8 advertiser exclusions; device-level CUPED with pooled theta per population, Welch 95% (z = 1.96). Band/type/below-control tables are raw Welch."
+  ],
+  [
+   "Gate replay.",
+   "Same simulation as OTT, re-run as a SQL port of `v10_gate_replay.py` (`gate_replay_all.sql`; validated against the 10-15 notebook run), TVT weights from in-window video sessions on this platform. Gate values are approximations — see §2c."
+  ],
+  [
+   "Served cue lists.",
+   "`ml_dev.tmp.abf3_new_pruner_cuepoints` (snapshot 2026-10-08; T1 = v4, T2 = v6, T3 = v5b; the table now also holds extra arms that are not part of v10 and were excluded) — catalog-level, so §B.4 and the first-cue table match the OTT report."
+  ],
+  [
+   "Code.",
+   "Queries and scripts in `abf-experiment/v10_verification/` (refresh outputs in `results_20261019/`)."
+  ]
+ ]
+}

@@ -1,0 +1,20 @@
+---
+name: project_v6_v7_interaction
+description: ABF3 v6 OTT × V7 concurrent-experiment TVT/revenue interaction analysis — status & where to resume
+metadata: 
+  node_type: memory
+  type: project
+  originSessionId: 83952915-3976-42da-a26c-83c45cad3e27
+---
+
+Analyzed whether the concurrent V7 experiment (`dynamic_ads_tolerance_mtml_device_xgboost_session`, ran 2026-05-21→06-02) interacted with ABF3 v6 OTT on TVT/revenue. **Status: COMPLETE; CONCLUSION REVERSED 2026-06-11 — NO interaction.** Report (Key Takeaways + new §6) and ABF_BACKGROUND.md updated, Doc republished.
+
+**FINAL FINDING (2026-06-11): no V7 interaction; ABF3's TVT cost is standalone & platform-driven.** A clean post-V7 follow-up settled it: V7 ended 06-02 but ABF3 v6 OTT kept running → V7-free window 06-03→06-10. Pre/post DiD, CUPED, with a Roku-vs-nonRoku platform falsification cut (device_id platform-specific → Roku/nonRoku disjoint; Roku never had V7 = placebo). Removing V7 from the platforms where it operated (non-Roku) left ABF3's TVT cost UNCHANGED — confirmed under BOTH estimands: **ToT** −0.60%→−0.76%, DiD +0.0% p=0.97 (CI [−0.50,+0.48] rules out the hypothesized −1.3 to −1.6% interaction); **ITT** (all-titles, randomization-preserving) −0.32%→−0.36%, DiD +0.05% p=0.75. The original "dose gradient" was platform heterogeneity (Roku flat / non-Roku negative *persists with V7 gone*; matches known split web −0.17/OTT −0.33/mobile −0.90). ABF3 DOES have a real standalone TVT cost (ToT −0.53% all-OTT). Mild P1→P2 softening on all platforms incl. Roku = runtime drift, not V7 (ITT revenue DiD sig-negative even on Roku −0.55% p=7e-5, which V7 never touched — clinches drift-not-V7). **Graduation trade does NOT depend on V7's status.** Notebook `/Users/bpulikkal@tubi.tv/ABF_3/abf_v6_prepost_v7` (run 2026-06-11, output `__run_2026-06-11_OUTPUT`); durable local source `/Users/bpulikkal/abf_experiment/abf_v6_prepost_v7.py` (PLATS dict drives ToT+ITT × allOTT/nonRoku/roku; periods P1=05-29→06-02, P2=06-03→06-10; build_period has on_title flag; cuped_effect has tot_filter flag).
+
+**ORIGINAL co-exposure analysis (2026-06-10, SUPERSEDED):** 2×2 factorial on 2.62M co-exposed devices, overlap 05-29→06-02, CUPED, pre 05-07→05-20. Notebook `/Users/bpulikkal@tubi.tv/ABF_3/abf_v6_v7_interaction` (Part A on-title ToT 2×2; Part B Roku natural control; Part C all-titles ITT). Local `/tmp/abf_v6_v7_interaction.py`; md2docx `/tmp/md2docx.py`. Then-conclusion: "likely-real interaction, underpowered" (ITT TVT interaction p=0.092; ABF3 TVT −0.70% sig on V7-treated). It leaned on Roku as a "zero-V7" anchor — but Roku is confounded with platform, which the 06-11 follow-up exposed. Revenue framing (per-hour monetization unchanged; total-rev follows TVT) was correct and still holds.
+
+**Report:** Drive ID `1j_BAgDJPTwph44A9SpERrUIzq4jU8Tby4WFAYvl1kkc`; local `ABF3_v6_OTT_x_V7_interaction_report.md` (Key Takeaways = 06-11 reversal; §1–§5 historical; §6 = post-V7 follow-up); state `memory/abf_v6_v7_interaction_report.docid`. See [[reference_abf_reports_drive]].
+
+**Key data facts (verified 2026-06-11 via `core_dev.statsig.exposures`):** schema uses `timestamp` (timestamp), `device_id`, `group_name`, `experiment_id` — NO `ds` column; date-filter via `CAST(timestamp AS DATE)`. V7 (`dynamic_ads_tolerance_mtml_device_xgboost_session`) exposures span 05-21→06-02 (HARD STOP, zero rows after 06-02). ABF3 `ads_abf_3_v6` spans 05-29→06-10 (today). Post-V7 contamination check: only new ad-load exp coinciding with V7's end is `ads_world_cup_ad_config_v1` (on 06-04) — but WC-specific + independently randomized (balanced across ABF3 arms) so doesn't bias the on-title cut; minor caveat for all-titles ITT only. ABF3 group_name: 'Test'/'Control'; V7: 'Control' vs 10 treatment arms (pooled any-treatment).
+
+**Possible next steps:** (1) density pruning as a lever to buy down the standalone TVT cost on high-cost platforms (mobile/non-Roku) — now a real option, NOT needed to fix any interaction; (2) me_score/e_score offline graduation gate still uncomputed across all platforms.

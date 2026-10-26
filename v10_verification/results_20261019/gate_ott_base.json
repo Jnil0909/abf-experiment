@@ -1,0 +1,334 @@
+{
+ "cells": [
+  {
+   "tt": "Episode",
+   "band": "1-3",
+   "arm": "v4",
+   "sim_delta": 5.29
+  },
+  {
+   "tt": "Episode",
+   "band": "1-3",
+   "arm": "v5b",
+   "sim_delta": 10.59
+  },
+  {
+   "tt": "Episode",
+   "band": "1-3",
+   "arm": "v6",
+   "sim_delta": 5.09
+  },
+  {
+   "tt": "Episode",
+   "band": "10-12",
+   "arm": "v4",
+   "sim_delta": -3.14
+  },
+  {
+   "tt": "Episode",
+   "band": "10-12",
+   "arm": "v5b",
+   "sim_delta": -1.77
+  },
+  {
+   "tt": "Episode",
+   "band": "10-12",
+   "arm": "v6",
+   "sim_delta": -3.25
+  },
+  {
+   "tt": "Episode",
+   "band": "13+",
+   "arm": "v4",
+   "sim_delta": -6.56
+  },
+  {
+   "tt": "Episode",
+   "band": "13+",
+   "arm": "v5b",
+   "sim_delta": -9.71
+  },
+  {
+   "tt": "Episode",
+   "band": "13+",
+   "arm": "v6",
+   "sim_delta": -6.71
+  },
+  {
+   "tt": "Episode",
+   "band": "4-6",
+   "arm": "v4",
+   "sim_delta": 0.39
+  },
+  {
+   "tt": "Episode",
+   "band": "4-6",
+   "arm": "v5b",
+   "sim_delta": 6.1
+  },
+  {
+   "tt": "Episode",
+   "band": "4-6",
+   "arm": "v6",
+   "sim_delta": 0.4
+  },
+  {
+   "tt": "Episode",
+   "band": "7-9",
+   "arm": "v4",
+   "sim_delta": -3.68
+  },
+  {
+   "tt": "Episode",
+   "band": "7-9",
+   "arm": "v5b",
+   "sim_delta": -0.56
+  },
+  {
+   "tt": "Episode",
+   "band": "7-9",
+   "arm": "v6",
+   "sim_delta": -3.8
+  },
+  {
+   "tt": "Movie",
+   "band": "1-3",
+   "arm": "v4",
+   "sim_delta": 84.82
+  },
+  {
+   "tt": "Movie",
+   "band": "1-3",
+   "arm": "v5b",
+   "sim_delta": 86.98
+  },
+  {
+   "tt": "Movie",
+   "band": "1-3",
+   "arm": "v6",
+   "sim_delta": 63.65
+  },
+  {
+   "tt": "Movie",
+   "band": "10-12",
+   "arm": "v4",
+   "sim_delta": 3.11
+  },
+  {
+   "tt": "Movie",
+   "band": "10-12",
+   "arm": "v5b",
+   "sim_delta": 7.42
+  },
+  {
+   "tt": "Movie",
+   "band": "10-12",
+   "arm": "v6",
+   "sim_delta": 7.82
+  },
+  {
+   "tt": "Movie",
+   "band": "13+",
+   "arm": "v4",
+   "sim_delta": -4.47
+  },
+  {
+   "tt": "Movie",
+   "band": "13+",
+   "arm": "v5b",
+   "sim_delta": -1.77
+  },
+  {
+   "tt": "Movie",
+   "band": "13+",
+   "arm": "v6",
+   "sim_delta": -0.93
+  },
+  {
+   "tt": "Movie",
+   "band": "4-6",
+   "arm": "v4",
+   "sim_delta": 39.34
+  },
+  {
+   "tt": "Movie",
+   "band": "4-6",
+   "arm": "v5b",
+   "sim_delta": 25.41
+  },
+  {
+   "tt": "Movie",
+   "band": "4-6",
+   "arm": "v6",
+   "sim_delta": 41.57
+  },
+  {
+   "tt": "Movie",
+   "band": "7-9",
+   "arm": "v4",
+   "sim_delta": 10.66
+  },
+  {
+   "tt": "Movie",
+   "band": "7-9",
+   "arm": "v5b",
+   "sim_delta": 15.61
+  },
+  {
+   "tt": "Movie",
+   "band": "7-9",
+   "arm": "v6",
+   "sim_delta": 15.64
+  }
+ ],
+ "band_pooled": [
+  {
+   "band": "1-3",
+   "arm": "v4",
+   "sim_delta": 5.33
+  },
+  {
+   "band": "1-3",
+   "arm": "v5b",
+   "sim_delta": 10.63
+  },
+  {
+   "band": "1-3",
+   "arm": "v6",
+   "sim_delta": 5.12
+  },
+  {
+   "band": "10-12",
+   "arm": "v4",
+   "sim_delta": 2.61
+  },
+  {
+   "band": "10-12",
+   "arm": "v5b",
+   "sim_delta": 6.69
+  },
+  {
+   "band": "10-12",
+   "arm": "v6",
+   "sim_delta": 6.95
+  },
+  {
+   "band": "13+",
+   "arm": "v4",
+   "sim_delta": -4.55
+  },
+  {
+   "band": "13+",
+   "arm": "v5b",
+   "sim_delta": -2.06
+  },
+  {
+   "band": "13+",
+   "arm": "v6",
+   "sim_delta": -1.14
+  },
+  {
+   "band": "4-6",
+   "arm": "v4",
+   "sim_delta": 1.12
+  },
+  {
+   "band": "4-6",
+   "arm": "v5b",
+   "sim_delta": 6.47
+  },
+  {
+   "band": "4-6",
+   "arm": "v6",
+   "sim_delta": 1.18
+  },
+  {
+   "band": "7-9",
+   "arm": "v4",
+   "sim_delta": 3.12
+  },
+  {
+   "band": "7-9",
+   "arm": "v5b",
+   "sim_delta": 7.11
+  },
+  {
+   "band": "7-9",
+   "arm": "v6",
+   "sim_delta": 5.42
+  }
+ ],
+ "episode_decomp": [
+  {
+   "arm": "v4",
+   "total": 0.15,
+   "from_fewer": -4.28,
+   "from_placement": -1.16,
+   "from_gains": 5.58
+  },
+  {
+   "arm": "v5b",
+   "total": 4.6,
+   "from_fewer": -1.06,
+   "from_placement": -2.13,
+   "from_gains": 7.78
+  },
+  {
+   "arm": "v6",
+   "total": 0.07,
+   "from_fewer": -4.32,
+   "from_placement": -1.16,
+   "from_gains": 5.54
+  }
+ ],
+ "first": [
+  {
+   "tt": "Episode",
+   "arm": "v4",
+   "first_ctl": 617.0,
+   "first_srv": 625.0,
+   "unw_first_ctl": 619.0,
+   "unw_first_srv": 661.0
+  },
+  {
+   "tt": "Episode",
+   "arm": "v5b",
+   "first_ctl": 617.0,
+   "first_srv": 596.0,
+   "unw_first_ctl": 619.0,
+   "unw_first_srv": 596.0
+  },
+  {
+   "tt": "Episode",
+   "arm": "v6",
+   "first_ctl": 617.0,
+   "first_srv": 624.0,
+   "unw_first_ctl": 619.0,
+   "unw_first_srv": 658.0
+  },
+  {
+   "tt": "Movie",
+   "arm": "v4",
+   "first_ctl": 1098.0,
+   "first_srv": 1111.0,
+   "unw_first_ctl": 1100.0,
+   "unw_first_srv": 1120.0
+  },
+  {
+   "tt": "Movie",
+   "arm": "v5b",
+   "first_ctl": 1098.0,
+   "first_srv": 1135.0,
+   "unw_first_ctl": 1100.0,
+   "unw_first_srv": 1117.0
+  },
+  {
+   "tt": "Movie",
+   "arm": "v6",
+   "first_ctl": 1098.0,
+   "first_srv": 1097.0,
+   "unw_first_ctl": 1100.0,
+   "unw_first_srv": 1094.0
+  }
+ ]
+}
